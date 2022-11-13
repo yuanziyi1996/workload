@@ -4,10 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cqrcb.workload.entity.User;
 import com.cqrcb.workload.mapper.UserMapper;
 import com.cqrcb.workload.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * <p>
@@ -19,13 +16,5 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
-    @Autowired
-    UserMapper userMapper;
 
-    //查询全部
-    public List<User> queryAll() {
-        userMapper.selectById(1);
-        List<User> users = userMapper.queryAll();
-        return users;
-    }
 }
