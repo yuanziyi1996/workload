@@ -3,6 +3,9 @@
  */
 package com.cqrcb.workload.common;
 
+import com.cqrcb.workload.errorutil.CommonCodeEnum;
+import com.cqrcb.workload.errorutil.CommonsException;
+
 public class RestResponse<T> {
 
     /**
@@ -40,6 +43,10 @@ public class RestResponse<T> {
 
     public static <T> RestResponse<T> fail(String msg) {
         return new RestResponse<>(CommonCodeEnum.FAIL.getCode(), null, msg, (Pager) null);
+    }
+
+    public static <T> RestResponse<T> fail(CommonsException ex) {
+        return new RestResponse<T>(CommonCodeEnum.FAIL.getCode(), null, ex.getMsg(), null);
     }
 
     @Override
