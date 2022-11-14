@@ -8,7 +8,7 @@
         <version>2.6.13</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.cqrcb</groupId>
+    <groupId>com.yyyf</groupId>
     <artifactId>workload</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>workload</name>
@@ -145,7 +145,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.cqrcb.workload.WorkloadApplication</mainClass>
+                    <mainClass>com.yyyf.workload.WorkloadApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
